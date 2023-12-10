@@ -12,6 +12,10 @@ export class UserLoginService {
     return this.http.post("http://localhost:8080/user/login", userLoginData);
   }
 
+  public getCurrentUser(){
+    return this.http.get(`http://localhost:8080/user/current-user`);
+  }
+
   public signUpMethod(registerData : any) {
     return this.http.post("http://localhost:8080/user/signUp", registerData);
   }
@@ -38,6 +42,10 @@ export class UserLoginService {
 
   public loginUser(token : any) {
     localStorage.setItem('token', token);
+  }
+
+  public billgenerate(data : any) {
+    return this.http.post("http://localhost:8080/bill/generateReport", data);
   }
 
   public isLoggedIn() {
