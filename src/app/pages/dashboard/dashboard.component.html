@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        /* Custom styles for the left menu */
+        .left-menu {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            bottom: 0;
+            background-color: #343a40;
+            color: #ffffff;
+            width: 200px;
+            /* Set the width of the left menu */
+            padding-top: 20px;
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        .menu-item {
+            padding: 10px;
+            border-bottom: 1px solid #4e555b;
+        }
+
+        .menu-item a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .menu-item:hover {
+            background-color: #495057;
+        }
+
+        /* Add some space to the right of the left menu */
+        .main-content {
+            position: relative;
+            margin-top: 56px;
+            margin-left: 200px;
+            width: -webkit-fill-available;
+
+            /* Set to the width of the left menu */
+            padding: 20px;
+        }
+
+        .scrollable-container {
+            max-height: 50vh;
+            /* Set the maximum height for the container */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            border: 1px solid #ddd;
+            /* Optional: Add a border for visual separation */
+            padding: 10px;
+            /* Optional: Add padding for better styling */
+        }
+
+        /* Optional: Style for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 0;
+            /* Remove bottom margin for better alignment */
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="position-absolute " style="z-index: 2;">
+        <nav class="navbar navbar-expand-lg bg-dark position-fixed w-100 z-5 shadow-sm" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
+
+    <section class="position-relative">
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Left Menu -->
+                <div class="col-md-3 left-menu p-0">
+                    <div class="menu-item">
+                        <a href="/updateCategories">update-categories</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">Public SMS</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">Pricing</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">Realtime Feed Demo</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">Request Trial</a>
+                    </div>
+                    <!-- Add more menu items as needed -->
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="col-md-9 main-content">
+                    <!-- Your main content goes here -->
+                    <div class="row">
+                        <div class="col-6">
+
+                            <h1>Options</h1>
+                        </div>
+                        <div class="col-6">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success me-2" type="submit">Go</button>
+                                <button class="btn btn-outline-primary me-2" type="submit"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                                    </svg></button>
+                                <button class="btn btn-outline-success" type="submit"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pause" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5" />
+                                    </svg></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="options-container">
+                        <div class="category">
+                            <h2>Total Category:</h2>
+                            <h2>{{data?.category}}</h2>
+                            <button class="details-btn btn" (click)="viewCategory()">
+                                View Category
+                            </button>
+                        </div>
+                        <div class="product">
+                            <h2>Total Product:</h2>
+                            <h2>{{data?.product}}</h2>
+                            <button class="details-btn btn" (click)="viewProduct()">
+                                View Product
+                            </button>
+                        </div>
+                        <div class="bill">
+                            <h2>Total Bill:</h2>
+                            <h2>{{data?.bill}}</h2>
+                            <button class="details-btn btn" (click)="viewBill()">
+                                View Bill
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Add more content as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

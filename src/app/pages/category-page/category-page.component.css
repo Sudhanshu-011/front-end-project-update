@@ -1,0 +1,48 @@
+hr {
+    margin: 50px 0;
+}
+
+hr.hr-style {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th:nth-child(1), td:nth-child(1) {
+    width: 80%;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+button.view-btn {
+    height: 20px;
+    padding: 2px 20px 20px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    height: 30px;
+    width: 36%;
+    color: #f5fbf1;
+    background-color: #6363d2;
+    padding: 2px 20px 20px 20px;
+}
+
+button.view-btn:hover {
+    color: #333;
+}
