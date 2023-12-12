@@ -26,4 +26,12 @@ export class CategoryPageComponent {
   viewCategory(id : any) {
     this.router.navigateByUrl(`/product/${id}`);
   }
+
+  addCategory() {
+    this.router.navigateByUrl(`/addCategory`);
+  }
+
+  logout() {
+    this.userService.logOut();
+  }
 }

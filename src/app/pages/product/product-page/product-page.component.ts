@@ -53,4 +53,8 @@ export class ProductPageComponent {
         console.log(data);
       });
   }
+
+  logout() {
+    this.userService.logOut;
+  }
 }

@@ -15,6 +15,9 @@ import { authInterceptorProviders } from './service/auth.interceptor';
 import { CategoryPageComponent } from './pages/category-page/category-page.component';
 import { ProductByCategoryComponent } from './pages/product/product-by-category/product-by-category.component';
 import { ProductPageComponent } from './pages/product/product-page/product-page.component';
+import { AddProductByIdComponent } from './pages/product/add-product-by-id/add-product-by-id.component';
+import { AddCategoryComponent } from './pages/add-category/add-category.component';
+import { ManageUsersComponent } from './pages/manage-users/manage-users.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ProductPageComponent } from './pages/product/product-page/product-page.
     ForgotPasswordComponent,
     CategoryPageComponent,
     ProductByCategoryComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    AddProductByIdComponent,
+    AddCategoryComponent,
+    ManageUsersComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin-top: 80px;
 }
 
 td, th {
@@ -29,7 +30,7 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-button.view-btn {
+button.view-btn, button.add-more-category {
     height: 20px;
     padding: 2px 20px 20px 20px;
     border: none;
@@ -41,6 +42,24 @@ button.view-btn {
     color: #f5fbf1;
     background-color: #6363d2;
     padding: 2px 20px 20px 20px;
+}
+
+.main-content {
+    position: relative;
+}
+
+button.add-more-category {
+    width: 12%;
+    background-color: #72e56e;
+    position: absolute;
+    top: 7rem;
+    right: 2rem;
+    margin-top: 30px;
+}
+
+button.add-more-category:hover {
+    background-color: #4cc248;
+    color: #333;
 }
 
 button.view-btn:hover {

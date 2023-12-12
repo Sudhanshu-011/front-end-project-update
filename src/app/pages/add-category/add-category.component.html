@@ -161,8 +161,8 @@
                     <div class="row">
                         <div class="col-6">
 
-                            <h1>Options</h1>
                         </div>
+                        
                         <div class="col-6">
                             <form class="d-flex" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -182,34 +182,32 @@
                             </form>
                         </div>
                     </div>
-
+                    <!-- Add more content as needed -->
                     <hr class="hr-style">
 
-                    <div class="options-container">
-                        <div class="category">
-                            <h2>Total Category:</h2>
-                            <h2>{{data?.category}}</h2>
-                            <button class="details-btn btn" (click)="viewCategory()">
-                                View Category
-                            </button>
-                        </div>
-                        <div class="product">
-                            <h2>Total Product:</h2>
-                            <h2>{{data?.product}}</h2>
-                            <button class="details-btn btn" (click)="viewProduct()">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="bill">
-                            <h2>Total Bill:</h2>
-                            <h2>{{data?.bill}}</h2>
-                            <button class="details-btn btn" (click)="viewBill()">
-                                View Bill
-                            </button>
-                        </div>
+                    <div class="form-container-div">
+                        <form class="form-style" action=""> 
+                            <label class="label-areas" for="first"> 
+                                  name: 
+                              </label> 
+                            <input class="input-areas" type="text" 
+                                   id="name"
+                                   name="name" 
+                                   placeholder="name of category" [(ngModel)] = "addData.name" required> 
+                  
+                            <div class="wrap"> 
+                                <button class="button-style" type="submit"
+                                        (click)="formSubmit()"> 
+                                    Submit 
+                                </button> 
+                                <button class="button-style" type="submit"
+                                        (click)="cancelFunction()">
+                                    Cancel
+                                </button>
+                            </div> 
+                        </form>
                     </div>
 
-                    <!-- Add more content as needed -->
                 </div>
             </div>
         </div>

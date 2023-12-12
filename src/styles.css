@@ -8,17 +8,19 @@ body {
 .black-snackbar {
     background: black !important;
     color: white !important;
+    border-radius: 6px;
 }
 
 .green-snackbar {
     background: #00ff7f !important;
     color: black !important;
+    border-radius: 6px;
 }
 
-/* .green-snackbar .mat-mdc-snack-bar-container .mdc-snackbar__surface  {
-    background-color: #00ff7f ;
-    color: black;
-} */
+.mat-mdc-snack-bar-container .mdc-snackbar__surface  {
+    background-color: #00ff7f !important;
+    color: black !important;
+}
 
 .mat-snack-bar-container {
     margin-right: auto !important;

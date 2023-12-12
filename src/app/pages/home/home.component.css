@@ -37,7 +37,7 @@
 }
 
 .middle-div {
-    height: 80.2vh;
+    height: 81vh;
     background-color: #eac3a0;
     display: flex;
     justify-content: center;
@@ -56,9 +56,10 @@
 
 .h1-heading {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     height: 70vh;
-    
 }
 
 h1.heading {

@@ -32,4 +32,8 @@ export class DashboardComponent {
   }
 
   viewBill() {}
+
+  logout() {
+    this.dataService.logOut();
+  }
 }

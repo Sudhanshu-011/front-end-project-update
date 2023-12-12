@@ -8,6 +8,9 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { CategoryPageComponent } from './pages/category-page/category-page.component';
 import { ProductByCategoryComponent } from './pages/product/product-by-category/product-by-category.component';
 import { ProductPageComponent } from './pages/product/product-page/product-page.component';
+import { AddProductByIdComponent } from './pages/product/add-product-by-id/add-product-by-id.component';
+import { AddCategoryComponent } from './pages/add-category/add-category.component';
+import { ManageUsersComponent } from './pages/manage-users/manage-users.component';
 
 const routes: Routes = [
   {
@@ -55,6 +58,24 @@ const routes: Routes = [
   {
     path: 'product',
     component: ProductPageComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'addProductById/:id',
+    component: AddProductByIdComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'addCategory',
+    component: AddCategoryComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'user',
+    component: ManageUsersComponent,
     pathMatch: 'full'
   }
 ];

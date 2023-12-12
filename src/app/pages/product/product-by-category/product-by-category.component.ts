@@ -26,6 +26,16 @@ export class ProductByCategoryComponent {
     this.loginService.getProductById(this.id)
       .subscribe((data : any) => {
         this.responseData = data;
+        console.log(this.responseData);
       })
   }
+
+  addProduct(id : any) {
+    this.router.navigateByUrl(`addProductById/${id}`)
+  }
+
+  logout() {
+    this.loginService.logOut();
+  };
+  
 }

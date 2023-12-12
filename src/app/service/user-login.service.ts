@@ -48,6 +48,27 @@ export class UserLoginService {
     return this.http.post("http://localhost:8080/bill/generateReport", data);
   }
 
+  public addProduct(data : any) {
+    return this.http.post(`http://localhost:8080/product/add`, data);
+  }
+
+  public addCategory(data : any) {
+    return this.http.post(`http://localhost:8080/category/add`, data);
+  }
+
+  public getAllUser() {
+    return this.http.get(`http://localhost:8080/user/get`);
+  }
+
+  public updateStatus(data : any) {
+    return this.http.post("http://localhost:8080/user/update", data);
+  }
+
+  public logOut() {
+    localStorage.removeItem('token');
+    return true;
+  }
+
   public isLoggedIn() {
     let tokenStr = localStorage.getItem('token');
     if (tokenStr == undefined || tokenStr == '' || tokenStr == null) {

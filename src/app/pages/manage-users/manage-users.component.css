@@ -34,45 +34,20 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-button.add-btn, button.remove-btn, button.add-more-product {
+button.view-btn, button.add-more-category {
+    height: 20px;
+    padding: 2px 20px 20px 20px;
     border: none;
     border-radius: 5px;
     margin-top: 5px;
     cursor: pointer;
     height: 30px;
-    width: 45%;
+    width: 36%;
     color: #f5fbf1;
-    background-color: #72e56e;
-    padding: 2px 20px 2px 20px;
-}
-
-.main-content {
-    position: relative;
-}
-
-button.add-more-product {
-    width: 12%;
     background-color: #6363d2;
-    position: absolute;
-    top: 7rem;
-    right: 2rem;
-    margin-top: 20px;
+    padding: 2px 20px 20px 20px;
 }
 
-button.add-more-product:hover {
+button.view-btn:hover {
     color: #333;
-}
-
-button.add-btn:hover {
-    background-color: #4cc248;
-    color: #333;
-}
-
-button.remove-btn {
-    background-color: #dd4e4e;
-}
-
-button.remove-btn:hover {
-    color: #333;
-    background-color: #cf4949;
 }
